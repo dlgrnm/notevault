@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/notes_provider.dart';
-import 'screens/home_screen.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Notes and Mood Tracker',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomeScreen(),
+      home: IntroScreen(),
     );
   }
 }

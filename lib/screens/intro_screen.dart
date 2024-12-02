@@ -1,5 +1,5 @@
-// screens/splash_screen.dart
 import 'package:flutter/material.dart';
+import 'pin_code_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class IntroScreen extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/bg_pattern_1.png'),
                 fit: BoxFit.cover,
@@ -27,24 +27,29 @@ class IntroScreen extends StatelessWidget {
                   'assets/intro_screen_illustration.png',
                   height: 400,
                 ),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                   'Welcome NoteVault',
                   style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
+                const Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  child: Text(
+                  child: const Text(
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed risus ligula, aliquam eu ex ac, sollicitudin pretium enim.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 16, color: Colors.black54),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PinCodeScreen()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
                     backgroundColor: Color(0xFF33808C),
@@ -54,7 +59,7 @@ class IntroScreen extends StatelessWidget {
                     shadowColor: Colors.black.withOpacity(0.2),
                     elevation: 10,
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
