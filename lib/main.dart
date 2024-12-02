@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Notes and Mood Tracker',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: IntroScreen(),
+      home: HomeScreen(),
     );
   }
 }

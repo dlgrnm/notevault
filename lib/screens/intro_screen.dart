@@ -22,7 +22,7 @@ class IntroScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 150),
+                SizedBox(height: 100),
                 Image.asset(
                   'assets/intro_screen_illustration.png',
                   height: 400,
@@ -46,7 +46,7 @@ class IntroScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                    padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
                     backgroundColor: Color(0xFF33808C),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -59,13 +59,13 @@ class IntroScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Үргэлжлүүлэх',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       SizedBox(width: 8),
                       Icon(
                         Icons.arrow_forward,
                         color: Colors.white,
-                        size: 20,
+                        size: 15,
                       ),
                     ],
                   ),
