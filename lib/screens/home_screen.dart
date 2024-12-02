@@ -99,6 +99,17 @@ class HomeScreenContent extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextField(
+                onEditingComplete: () {
+                  if (_contentController.text.isNotEmpty) {
+                    final newNote = Note(
+                        content: _contentController.text,
+                        mood: "Happy",
+                        timestamp: DateTime.now());
+
+                    notesProvider.addNote(newNote);
+                    _contentController.clear();
+                  }
+                },
                 controller: _contentController,
                 decoration: InputDecoration(
                   hintText: 'Тэмдэглэл бичих...',
